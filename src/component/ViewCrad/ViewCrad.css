@@ -1,0 +1,72 @@
+:root {
+    --font-size-all: 2rem;
+}
+
+
+.crad__gif {
+    height: calc(var(--font-size-all) * 6);
+}
+.container {
+    max-width: calc(var(--font-size-all) * 17);
+    margin: 0 auto;
+	font-size: var(--font-size-all);
+}
+.search__wrapper {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.input {
+    min-height: 20px;
+    border-radius: 10px;
+    padding: 0 0 0 20px;
+}
+.search__button {
+    height: calc(var(--font-size-all) * 2.25);
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #6e673580, #054141);
+    border-radius: 25px;
+}
+
+.cardC{
+    width: calc(var(--font-size-all) * 15);
+    margin: 0 auto
+}
+.crad__wrapper {
+    background: linear-gradient(to bottom right, #6e673580, #054141);
+    padding: 50px 0;
+    border-radius: 25px;
+    border: none;
+}
+
+.crad__temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.crad__temp_number {
+    font-size: calc(var(--font-size-all) * 3);
+    font-weight: 600;
+}
+.crad__temp_img {
+    height: calc(var(--font-size-all) * 2);
+    padding-left: 30px;
+}
+
+.crad__city {
+    font-size: calc(var(--font-size-all) * 2);
+}
+
+
+.crad__descr{
+	display: flex;
+	justify-content: space-around;
+}
+.crad__descr img{
+	height: calc(var(--font-size-all) * 2);
+	padding-right: 25px;
+}
+.card__descr_wrapper{
+	display: flex;
+}
