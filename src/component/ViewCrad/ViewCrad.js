@@ -26,7 +26,6 @@ const ViewCrad = ({
     weatherId,
 }) => {
     let Id = Number(weatherId);
-    console.log(weatherId);
     let gif;
     if (Id >= 200 && Id < 300) {
         gif = storm;
@@ -53,7 +52,7 @@ const ViewCrad = ({
                     <input
                         size="lg"
                         type="text"
-                        placeholder="Large text"
+                        placeholder="Введите город"
                         className="input"
                         onChange={(e) => handleChange(e.target.value)}
                     />

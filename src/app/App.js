@@ -1,5 +1,4 @@
 import ServiceWeather from '../component/ServiceWeather/ServiceWeather';
-
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,8 +19,9 @@ class App extends Component {
 
     componentDidMount() {
 		this.updateWeatherToDay();
-
+		this.updateWeatherToWeek()
     }
+	
 	componentDidUpdate(){
 		if(this.state.cityUpdate !== false){
 			this.updateWeatherToDay()
@@ -36,6 +36,10 @@ class App extends Component {
     updateWeatherToDay = () => {
         this.weather.getData().then(this.hendleWeatherToDay);
     };
+	updateWeatherToWeek = () => {
+        this.weather.getDataList().then(res => console.log(res));
+    };
+
 	handleChange = (value) => {
 		this.setState({city: value})
 	}
