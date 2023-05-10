@@ -2,36 +2,23 @@
     --font-size-all: 2rem;
 }
 
-
 .crad__gif {
     height: calc(var(--font-size-all) * 6);
+    transition: .5s ;
+}
+.crad__gif:hover{
+    scale: 1.2; 
 }
 .container {
     max-width: calc(var(--font-size-all) * 17);
     margin: 0 auto;
 	font-size: var(--font-size-all);
 }
-.search__wrapper {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    margin-bottom: 100px;
-}
-.input {
-    min-height: 20px;
-    border-radius: 10px;
-    padding: 0 0 0 20px;
-}
-.search__button {
-    height: calc(var(--font-size-all) * 2.25);
-    cursor: pointer;
-    background: linear-gradient(to bottom right, #6e673580, #054141);
-    border-radius: 25px;
-}
+
 
 .cardC{
     width: calc(var(--font-size-all) * 15);
-    margin: 0 auto
+    margin: 50px auto
 }
 .crad__wrapper {
     background: linear-gradient(to bottom right, #6e673580, #054141);
@@ -56,6 +43,7 @@
 
 .crad__city {
     font-size: calc(var(--font-size-all) * 2);
+    margin-bottom: 25px;
 }
 
 
@@ -69,4 +57,15 @@
 }
 .card__descr_wrapper{
 	display: flex;
+}
+
+@media (max-width: 768px) {
+	:root {
+		--font-size-all: 1.5rem;
+	}
+}
+@media (max-width: 576px) {
+	:root {
+		--font-size-all: 1.2rem;
+	}
 }

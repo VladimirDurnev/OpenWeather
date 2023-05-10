@@ -1,0 +1,17 @@
+
+.weatherToWeek{
+    width: 250px;
+    margin: 50px 20px;
+    padding: 25px 0;
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #282c34;
+}
+
+.weatherToWeek__img{
+    height: 8rem;
+}
+
+.weatherToWeek__temp{
+    margin: 15px;
+}

@@ -1,18 +1,20 @@
+
+
 import './ViewCrad.css';
 
-import search from './search.gif';
 
-import sun from './sun.gif';
-import cloudy from './cloudy.gif';
-import rein from './rein.gif';
-import drizzle from './drizzle.gif';
-import foggy from './foggy.gif';
-import snow from './snow.gif';
-import storm from './storm.gif';
 
-import celsius from './celsius.png';
-import drop from './drop.png';
-import wind from './wind.png';
+import sun from '../../img/sun.gif';
+import cloudy from '../../img/cloudy.gif';
+import rein from '../../img/rein.gif';
+import drizzle from '../../img/drizzle.gif';
+import foggy from '../../img/foggy.gif';
+import snow from '../../img/snow.gif';
+import storm from '../../img/storm.gif';
+
+import celsius from '../../img/celsius.png';
+import drop from '../../img/drop.png';
+import wind from '../../img/wind.png';
 
 const ViewCrad = ({
     weatherTemp,
@@ -21,8 +23,8 @@ const ViewCrad = ({
     windSpeed,
     weatherHumidity,
     cityName,
-    handleChange,
-    handleClick,
+    // handleChange,
+    // handleClick,
     weatherId,
 }) => {
     let Id = Number(weatherId);
@@ -44,32 +46,16 @@ const ViewCrad = ({
     } else {
         gif = null;
     }
-
+    
     return (
         <>
             <div className="container">
-                <form className="search__wrapper">
-                    <input
-                        size="lg"
-                        type="text"
-                        placeholder="Введите город"
-                        className="input"
-                        onChange={(e) => handleChange(e.target.value)}
-                    />
-                    <img
-                        src={search}
-                        alt=""
-                        className="search__button"
-                        onClick={handleClick}
-                    />
-                </form>
-
                 <div className="cardC">
                     <div className="crad__wrapper">
                         <img className="crad__gif" src={gif} alt="" />
                         <div className="crad__temp">
                             <div className="crad__temp_number">
-                                {weatherTemp > 0 ? '+' + Math.round(weatherTemp) : Math.round(weatherTemp)}
+                                {weatherTemp}
                             </div>
                             <img
                                 src={celsius}
@@ -77,7 +63,7 @@ const ViewCrad = ({
                                 className="crad__temp_img"
                             />
                         </div>
-                        <p className="crad__city">{cityName}</p>
+                        <p className="crad__city">{weatherСondition}</p>
                         <div className="crad__descr">
                             <div className="card__descr_wrapper">
                                 <img src={wind} alt="wind" />
